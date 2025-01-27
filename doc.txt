@@ -1,0 +1,15 @@
+create backend and frontend folder
+
+give these commands in root levels
+ npm init -y
+ npm i mongodb express cors dotenv 
+
+ in frontend folder give this command
+    npx create-react-app . (this is old and not updated)
+
+    use this instead of that 
+        npx create-next-app@latest .
+        and select react and select java script.
+
+add this to dynamic web pages
+    npm install react-router-dom
