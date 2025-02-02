@@ -11,7 +11,7 @@ const nav = () => {
 
   return (
     <>
-      <div className=' bg-emerald-600 py-5'>S
+      <div className=' bg-emerald-600 py-5'>
         <div className=' text-4xl font-bold text-white  text-center'>
           nav bar
         </div>
