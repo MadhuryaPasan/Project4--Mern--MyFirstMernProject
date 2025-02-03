@@ -1,12 +1,9 @@
 import axios from 'axios';
+import { iData } from './interface';
 
-export interface iData {
-    name: string;
-    age: number;
-}
 
-const URL:string = "http://localhost:5000";
-const URL_Backend:string = "/test";
+const URL: string = "http://localhost:5000";
+const URL_Backend: string = "/test";
 
 export async function getAllDoc() {
     try {

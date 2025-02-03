@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.bg_primary{
+    @apply bg-sky-400;
+}

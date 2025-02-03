@@ -1,4 +1,44 @@
 //install npm install axios
+import NavBar from "./components/NavBar";
+import Layout from "./components/Layout";
+
+import { HashRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Landing from "./pages/Landing";
+import Profile from "./pages/Profile";
+import CreateBlog from "./pages/CreateBlog";
+import ReadBlog from "./pages/ReadBlog";
+
+function App() {
+  return (
+    // use other way if possible
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+
+        {/* NavBar is going to include all below routes. becacuse of <Layout/> */}
+        <Route element={<Layout />}>
+          {/* http://localhost:5173/#/home */}
+          <Route path="/home" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/createblog" element={<CreateBlog />} />
+          <Route path="/read-blog/:id" element={<ReadBlog />} />
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
+}
+
+export default App;
+
+/* 
+
+//install npm install axios
 import { useEffect, useState } from "react";
 import {
   getAllDoc,
@@ -72,3 +112,7 @@ function updateBtn() {
 }
 
 export default App;
+
+
+
+*/
