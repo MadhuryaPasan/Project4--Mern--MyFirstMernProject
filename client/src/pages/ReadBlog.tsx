@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { iData } from "../functions/interface";
 import { getOneDoc } from "../functions/dbConnectApi";
 
 const ReadBlog = () => {
+  const Navigate = useNavigate();
   const params = useParams();
   const id = params.id ?? "";
 
@@ -25,6 +26,14 @@ const ReadBlog = () => {
 
   return (
     <>
+      {/* -1 go back one page */}
+      <button
+        className="bg_primary m-2 p-2 rounded-xl"
+        onClick={() => Navigate(-1)}
+      >
+        {" "}
+        go Back
+      </button>
       <div>ReadBlog</div>
       {/* <div>{data ? JSON.stringify(data) : "Loading..."}</div> */}
       {/* <div>{data._id}</div>
@@ -39,5 +48,4 @@ const ReadBlog = () => {
 
 export default ReadBlog;
 
-
-//2.33.32 
+//2.33.32
