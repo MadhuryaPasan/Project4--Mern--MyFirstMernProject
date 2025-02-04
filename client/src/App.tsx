@@ -1,5 +1,4 @@
 //install npm install axios
-import NavBar from "./components/NavBar";
 import Layout from "./components/Layout";
 
 import { HashRouter, Route, Routes } from "react-router-dom";

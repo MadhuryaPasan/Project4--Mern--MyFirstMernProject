@@ -28,7 +28,7 @@ export async function getOneDoc(id: string) {
     }
 
 }
-export async function createDoc(data: iData | any) {
+export async function createDoc(data: iData) {
 
     //"http://localhost:5000/test"
     const response = await axios.post(`${URL}${URL_Backend}`, data);
