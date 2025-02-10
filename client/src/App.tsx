@@ -10,6 +10,7 @@ import Landing from "./pages/Landing";
 import Profile from "./pages/Profile";
 import CreateBlog from "./pages/CreateBlog";
 import ReadBlog from "./pages/ReadBlog";
+import CreateUSer from "./pages/CreateUser";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
           <Route path="/createblog" element={<CreateBlog />} />
           <Route path="/read-blog/:id" element={<ReadBlog />} />
+          <Route path="/createuser" element={<CreateUSer />} />
         </Route>
       </Routes>
     </HashRouter>

@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import testRoutes from './testRoutes.js';
+import user from './userRoutes.js';
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -20,7 +21,7 @@ app.use(cors()); //Cross-Origin Resource Sharing (CORS) is a mechanism that uses
 app.use(express.json()); //This is a built-in middleware function in Express. It parses incoming requests with JSON payloads and is based on body-parser.
 
 app.use(testRoutes);//use is a method to mount the specified middleware function(s) at the path which is being specified. It is mostly used to set up middleware for your application.
-
+app.use(user);
 
 //Connect to MongoDB
 //listen is a method that is used to bind and listen the connections on the specified host and port. It is an instance method of the http.Server class.

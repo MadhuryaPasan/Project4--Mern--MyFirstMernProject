@@ -29,6 +29,7 @@ testRoutes.route("/test").get(async (req, res) => {
 testRoutes.route("/test/:id").get(async (req, res) => {
   let db = database.getDatabase();
 
+  
   let data = await db
     .collection("test")
     .findOne({ _id: new ObjectId(req.params.id) });
@@ -47,7 +48,6 @@ testRoutes.route("/test").post(async (req, res) => {
   let db = database.getDatabase();
 
   let mongoObject = { name: req.body.name, age: req.body.age };
-
   let data = await db.collection("test").insertOne(mongoObject);
 
   res.json(data);
